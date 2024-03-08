@@ -5,7 +5,11 @@ import { displayDateLocation, displayWeather, displayTomWeather } from "./functi
 
 const baseURL = 'http://api.weatherapi.com/v1/';
 
-const API_KEY = require('./config')
+// When using the config. js file which is gitignored
+// const API_KEY = require('./config')
+
+// Using secret variable
+const {API_KEY} = process.env;
 
 let inMetricUnits = false;
 
