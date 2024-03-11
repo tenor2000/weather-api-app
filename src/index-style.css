@@ -5,6 +5,13 @@ header {
     align-items: center;
 }
 
+body, html {
+    background-color: blue;
+    background-image: url('https://www.pixground.com/wp-content/uploads/2023/09/Retro-Pixel-Art-AI-Generated-4K-Wallpaper-1024x576.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #search {
     display: flex;
     justify-content: center;
@@ -60,7 +67,7 @@ header {
 }
 
 input:checked + .slider {
-    background-color: green;
+    background-color: lightgreen;
 }
 
 input:focus + .slider {
@@ -76,6 +83,8 @@ input:checked + .slider:before {
 
 #content {
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -90,11 +99,12 @@ input:checked + .slider:before {
 
 #weather-card-box {
     display: inline-flex;
-    flex-wrap: wrap; /* Allow flex items to wrap if needed */
+    flex-wrap: wrap;
     border: 2px solid black;
     border-radius: 8px;
     padding: 24px;
     gap: 24px;
+    background-color: rgba(173, 216, 230, 0.5);
 }
 
 .weather-card {

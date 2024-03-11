@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+require('dotenv').config({path: '.env'});
+
 module.exports = {
     mode: "development",
     devServer: {
@@ -14,12 +16,24 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-            test: /\.css$/, // Match CSS files
+          {
+            test: /\.css$/,
             use: ['style-loader', 'css-loader']
-            }
+          },
+          {
+            test: /\.(png|jpg|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'imgs',
+                },
+              },
+            ]
+          }
         ]
-    },
+      },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -30,7 +44,7 @@ module.exports = {
             title: "API Weather"
         }),
         new webpack.DefinePlugin({
-            'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
-        }),
+            'process.env': JSON.stringify(process.env)
+        })
     ],
 };

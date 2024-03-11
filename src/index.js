@@ -8,8 +8,8 @@ const baseURL = 'http://api.weatherapi.com/v1/';
 // When using the config. js file which is gitignored
 // const API_KEY = require('./config')
 
-// Using secret variable
-const {API_KEY} = process.env;
+// eslint-disable-next-line prefer-destructuring
+const API_KEY = process.env.API_KEY;
 
 let inMetricUnits = false;
 
