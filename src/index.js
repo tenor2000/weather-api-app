@@ -3,7 +3,7 @@ import { displayDateLocation, displayWeather, displayTomWeather } from "./functi
 
 // const weatherGovAddress = 'https://api.weather.gov';
 
-const baseURL = 'http://api.weatherapi.com/v1/';
+const baseURL = 'https://api.weatherapi.com/v1/';
 
 // When using the config. js file which is gitignored
 // const API_KEY = require('./config')
