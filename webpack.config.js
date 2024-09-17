@@ -7,7 +7,7 @@ require('dotenv').config({path: '.env'});
 module.exports = {
     mode: "development",
     devServer: {
-        static: './dist',
+        static: path.join(__dirname,'./dist'),
         hot: true,
         port: 9000,
     },
@@ -28,6 +28,7 @@ module.exports = {
                 options: {
                   name: '[name].[ext]',
                   outputPath: 'imgs',
+                  publicPath: 'imgs',
                 },
               },
             ]

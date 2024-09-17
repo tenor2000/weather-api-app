@@ -11,6 +11,14 @@ const baseURL = 'https://api.weatherapi.com/v1/';
 // eslint-disable-next-line prefer-destructuring
 const API_KEY = process.env.API_KEY;
 
+// Set Background Image
+document.body.style.backgroundImage = "url('imgs/Sunny-Day-Pixel-Art-AI-Generated-4K-Wallpaper.jpg')";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundPosition = "center";
+document.body.style.height = "100vh"; 
+document.body.style.margin = "0"; 
+
 let inMetricUnits = false;
 
 // Todays Date
